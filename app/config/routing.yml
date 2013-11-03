@@ -1,0 +1,5 @@
+omt_todo:
+    resource: "@OmtTodoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
