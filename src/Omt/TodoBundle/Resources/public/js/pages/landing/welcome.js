@@ -33,7 +33,7 @@ require(
                             data: me.serialize(),
                             dataType: "json",
                             success: function (data) {
-                                var messageBlockText = messageBlock.children(".message-text"),
+                                var messageBlockText = messageBlock.children(".-message-text"),
                                     errorMessage;
                                 if (!data.success) {
                                     if (messages[data.message]) {
@@ -96,7 +96,7 @@ require(
                             data: me.serialize(),
                             dataType: "json",
                             success: function (data) {
-                                var messageBlockText = messageBlock.children(".message-text"),
+                                var messageBlockText = messageBlock.children(".-message-text"),
                                     errorMessage;
                                 if (!data.success) {
                                     if (messages[data.message]) {
