@@ -1,1 +1,29 @@
-<h1></h1>
+{% extends "OmtTodoBundle::layout.html.twig" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form id="loginForm" class="block block-dark block-outlined"
+              action="{{ path('auth_standard_login') }}" method="POST"
+              onsubmit="return false">
+            <input class="input-md" type="text" name="email" placeholder="Email" /><br />
+            <input class="input-md" type="password" name="password" placeholder="Password" /><br />
+            <input type="submit" value="Login" />
+        </form>
+
+        <form id="registerForm" class="block block-dark block-outlined"
+              action="{{ registerForm.vars.action }}" method="{{ registerForm.vars.method }}"
+              onsubmit="return false">
+            <input class="input-md" type="text" name="{{ registerForm.email.vars.full_name }}" placeholder="Email" /><br />
+            <input class="input-md" type="password" name="{{ registerForm.password.vars.full_name }}" placeholder="Password" /><br />
+            <input class="input-md" type="password" name="{{ registerForm.confirmPassword.vars.full_name }}" placeholder="Confirm password" /><br />
+            {{ form_widget(registerForm._token) }}
+            <input type="submit" value="Register" />
+        </form>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset("bundles/omttodo/js/pages/landing/welcome.js") }}"></script>
+{% endblock %}

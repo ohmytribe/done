@@ -1,0 +1,170 @@
+* {
+    font-family: Helvetica;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    font-size: 12px;
+    padding: 0 0 20px;
+    background-color: #eee;
+    color: #333;
+}
+header {
+    font-style: italic;
+    color: #eee;
+    background-color: #777;
+}
+footer {
+    text-align: right;
+    color: #bbb;
+}
+a {
+    color: #04b;
+}
+a:focus,
+a:hover {
+    color: #07f;
+}
+a.btn-link {
+    text-decoration: none;
+    border-bottom: 1px dotted #04b;
+}
+a.btn-link:focus,
+a.btn-link:hover {
+    border-bottom: 1px dotted #07f;
+}
+.block {
+    padding: 15px;
+}
+.block-dark {
+    background-color: #ddd;
+}
+.block-light {
+    background-color: #e5e5e5;
+}
+.message {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+.block-error {
+    background-color: #fdd;
+    color: #c44;
+}
+.block-success {
+    background-color: #dfd;
+    color: #494;
+}
+.block-outlined {
+    border-bottom: 1px dotted #aaa;
+}
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 7px 10px;
+    outline: none;
+    border: 1px solid #bbb;
+    background-color: #eee;
+    margin-bottom: 5px;
+}
+select:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: #fff;
+    border: 1px solid #999;
+}
+select:hover,
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    border: 1px solid #999;
+}
+input[type="button"],
+input[type="submit"]
+{
+    padding: 7px 10px;
+    margin-top: 5px;
+}
+.input-sm {
+    width: 120px;
+}
+.input-lg {
+    width: 400px;
+}
+.input-md {
+    width: 240px;
+}
+input.error {
+    background-color: #fdd;
+    border: 1px solid #fbb;
+}
+input[type="text"].error:focus,
+input[type="email"].error:focus,
+input[type="password"].error:focus {
+    background-color: #fee;
+    border: 1px solid #e88;
+}
+input[type="text"].error:hover,
+input[type="email"].error:hover,
+input[type="password"].error:hover {
+    border: 1px solid #e88;
+}
+label.error {
+    margin-left: 10px;
+    color: #c44;
+}
+.message-close-button {
+    margin-right: 20px;
+}
+.hidden {
+    display: none;
+}
+.isloading-overlay .isloading-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -100px;
+    line-height: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+.todo {
+    font-size: 16px;
+}
+.todo-high-priority {
+    background-color: #fdc;
+}
+.todo-medium-priority {
+    background-color: #ffc;
+}
+.todo-low-priority {
+    background-color: #eee;
+}
+.todo-done {
+    color: #999;
+}
+.todo-done .todo-mark-done-button {
+    display: none;
+}
+.todo-done .todo-edit-button {
+    display: none;
+}
+h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
