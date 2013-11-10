@@ -1,0 +1,50 @@
+{% extends "OmtTodoBundle::layout.html.twig" %}
+
+{% block title %}Todo list{% endblock %}
+
+{% block header %}
+    <a href="{{ path("auth_logout") }}">Log me out</a> please.
+{% endblock %}
+
+{% block body %}
+    <div class="block block-outlined">
+        <form id="createTodoForm" action="{{ path("create_todo") }}" method="POST">
+            <input type="text" maxlength="200" name="task" placeholder="task" />
+            <select name="priority">
+                <option>low</option>
+                <option>medium</option>
+                <option>high</option>
+            </select>
+            <input type="submit" value="Create" />
+        </form>
+    </div>
+
+    <div id="todoContainer"></div>
+
+    <div id="todoTemplate" style="display: none">
+        <div class="todo block block-outlined -todo-panel">
+            <a href="#" class="btn-link todo-mark-done-button -todo-mark-done-button">Done!</a>
+            <span class="todo-text"></span>
+            <a href="#" class="btn-link todo-edit-button -todo-edit-button">edit</a>
+            <a href="#" class="btn-link -todo-remove-button">remove</a>
+        </div>
+    </div>
+    <div id="todoEditTemplate" style="display: none">
+        <div class="block block-outlined -panel -todo-edit-panel">
+            <form method="POST">
+                <input type="text" maxlength="200" name="task" placeholder="task" />
+                <select name="priority">
+                    <option>low</option>
+                    <option>medium</option>
+                    <option>high</option>
+                </select>
+                <input type="submit" value="Save" />
+                <a href="#" class="btn-link -panel-remove-button">cancel</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset("bundles/omttodo/js/pages/todo/list.js") }}"></script>
+{% endblock %}
