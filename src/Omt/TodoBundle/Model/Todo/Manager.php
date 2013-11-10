@@ -73,7 +73,7 @@ class Manager
     public function getList()
     {
         return $this->getRepository()
-            ->findBy(array('user' => $this->user), array('priority' => 'desc', 'isDone' => 'asc'));
+            ->findBy(array('user' => $this->user), array('isDone' => 'asc', 'priority' => 'desc'));
     }
 
     /**
