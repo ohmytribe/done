@@ -66,6 +66,7 @@ in production mode.
 - Login and security should be based on Symfony2 Security;
 - Error reporting should be more bullet-proof structured;
 - Inputs should be validated more carefully (still, there is no way system can be harmed by input for now);
+- JavaScript code should be revised (for now its a pile of hairy crap);
 - Tests! Tests! Tests! Tests! As for now it only was smoke-tested.
 
 ## Special thanks
