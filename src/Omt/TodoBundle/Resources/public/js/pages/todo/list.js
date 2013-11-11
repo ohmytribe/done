@@ -36,11 +36,13 @@ require(
                         todoContainer.append(todoPanel);
                     });
                 });
+            },
+            closeEditPanels = function () {
+                $("#todoContainer").children('.-todo-edit-panel').remove();
             };
 
         $(document).on("click", ".-todo-edit-button", function () {
-            var todoContainer = $("#todoContainer"),
-                todoPanel = $(this).closest(".-todo-panel"),
+            var todoPanel = $(this).closest(".-todo-panel"),
                 todoEditTemplate = $("#todoEditTemplate").html(),
                 todoEditPanel = $(todoEditTemplate),
                 form = todoEditPanel.children("form"),
@@ -83,7 +85,7 @@ require(
                     }
                 });
 
-            todoContainer.children('.-todo-edit-panel').remove();
+            closeEditPanels();
 
             todoEditPanel.find("input[name='task']").val(todoPanel.data('task'));
             todoEditPanel.find("select[name='priority']").val(todoPanel.data('priority'));
@@ -97,6 +99,7 @@ require(
 
         $(document).on("click", ".-todo-mark-done-button", function () {
             var todoPanel = $(this).closest(".-todo-panel");
+            closeEditPanels();
             $.ajax({
                 url: baseUrl + "/todo/done/" + todoPanel.data("id"),
                 dataType: "json",
@@ -124,6 +127,7 @@ require(
 
         $(document).on("click", ".-todo-remove-button", function () {
             var todoPanel = $(this).closest(".-todo-panel");
+            closeEditPanels();
             $.ajax({
                 url: baseUrl + "/todo/remove/" + todoPanel.data("id"),
                 dataType: "json",
