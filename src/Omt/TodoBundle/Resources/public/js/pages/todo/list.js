@@ -177,6 +177,8 @@ require(
                                     messageBlock.addClass("block-error").show();
                                     focusTaskInput();
                                 } else {
+                                    me.find("[name='task']").val('');
+                                    me.find("[name='priority']").val(0);
                                     reloadList();
                                 }
                             }
