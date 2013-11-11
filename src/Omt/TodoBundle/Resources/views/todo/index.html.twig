@@ -9,7 +9,7 @@
 {% block body %}
     <div class="block block-outlined">
         <form id="createTodoForm" action="{{ path("create_todo") }}" method="POST">
-            <input type="text" maxlength="200" name="task" placeholder="task" />
+            <input type="text" maxlength="200" name="task" placeholder="enter task description" />
             <select name="priority">
                 <option>low</option>
                 <option>medium</option>
@@ -32,7 +32,7 @@
     <div id="todoEditTemplate" style="display: none">
         <div class="block block-outlined -panel -todo-edit-panel">
             <form method="POST">
-                <input type="text" maxlength="200" name="task" placeholder="task" />
+                <input type="text" maxlength="200" name="task" placeholder="enter task description" />
                 <select name="priority">
                     <option>low</option>
                     <option>medium</option>
