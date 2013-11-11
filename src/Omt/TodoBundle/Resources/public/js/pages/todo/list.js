@@ -83,15 +83,14 @@ require(
                     }
                 });
 
-            focusTaskInput();
-
-
             todoContainer.children('.-todo-edit-panel').remove();
 
             todoEditPanel.find("input[name='task']").val(todoPanel.data('task'));
             todoEditPanel.find("select[name='priority']").val(todoPanel.data('priority'));
 
             todoPanel.after(todoEditPanel);
+
+            focusTaskInput();
 
             return false;
         });
@@ -189,6 +188,8 @@ require(
                         return true;
                     }
                 });
+
+            focusTaskInput();
 
         })(jQuery);
 
